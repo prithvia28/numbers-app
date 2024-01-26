@@ -1,0 +1,41 @@
+<!-- File: numbers-app/index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arithmetic Calculator</title>
+
+</head>
+<body>
+
+    <section>
+        <h2>Arithmetic</h2>
+        
+        <input type="number" id="num1" placeholder="Enter first number" required>
+
+        <input type="number" id="num2" placeholder="Enter second number" required>
+
+        <button onclick="calculateSum()">=</button>
+
+        <p id="result"></p>
+    </section>
+
+    <script>
+        async function calculateSum() {
+            const a = document.getElementById("num1");
+            const b = document.getElementById("num2");
+            const x = document.getElementById("result"); // Fix: Changed "answer" to "result"
+            let first = parseInt(a.value);
+            let second = parseInt(b.value);
+            
+            const response = await fetch("http://localhost:3000/add/" + first + "/" + second);
+            const sum = await response.json();
+            
+            x.innerHTML = sum;
+        }
+    </script>
+
+</body>
+</html>
