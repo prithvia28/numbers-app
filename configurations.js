@@ -6,9 +6,9 @@ const hosts_local = {
 };
 
 const hosts_remote = {
-   arithmetic_servoce: "https://arithmetic-service.onrender.com",
-   primes_service: "https://primes-service.onrender.com",
-   ciphers_service: "https://ciphers-service-hbahramian.onrender.com",
+   arithmetic_servoce: "https://arithmetic-service-latest-0747.onrender.com",
+   primes_service: "https://primes-service-latest-4xck.onrender.com",
+   ciphers_service: "https://ciphers-service-latest-xk9m.onrender.com",
    quotation_service: "?"
 };
 
